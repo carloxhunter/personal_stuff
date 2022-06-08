@@ -1,0 +1,11 @@
+git clone -> http://user@bitbucket/user/repo.git
+ir a carpeta de git ->
+git branch -a | grep -v HEAD | perl -ne 'chomp($_); s|^\*?\s*||; if (m|(.+)/(.+)| && not $d{$2}) {print qq(git branch --track $2 $1/$2\n)} else {$d{$_}=1}' | csh -xfs
+->
+git fetch --all
+git pull --all
+->
+git remote add github http://user@github.com/user/repo.git
+->
+git push --mirror github 
+

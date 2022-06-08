@@ -1,0 +1,2 @@
+ docker run --name mypostgres -p 5432:5432 -e POSTGRES_PASSWORD=pass --restart unless-stopped -d postgres     
+ip local del wsl: ip addr | grep eth0
